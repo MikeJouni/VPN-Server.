@@ -1,22 +1,40 @@
-CIS 375 Group Project
+# CIS 375 Group Project
 
-This application automatically deploys a VPN server on a cloud service provider (only AWS is currently supported).
-The application manages the VPN connection and allows the user to filter DNS traffic and view statistcs about their network usage. 
+This application automatically deploys a VPN server on a cloud service provider (currently, only AWS is supported). The application manages the VPN connection, allows the user to filter DNS traffic, and provides statistics about their network usage.
 
+## Creating Access/Secret Key
 
+To create an Access and Secret Key in AWS for use with the VPN application, follow these steps:
 
-Creating Access/Secret Key
+1. **Log into AWS**:
+   - Go to the AWS Management Console at [AWS Console](https://aws.amazon.com/).
 
-Log into AWS
-Go to IAM (Identity and Access Management) Dashboard
-Go to users tab on the left side of the screen, found between User Groups and Roles options under Access Management
-Create a new user, giving it a name and allowing access to AWS management console (not required)
-Set the permissions as "Attach Polcicies Directly", giving it one policy of AmazonEC2FullAccess, ignore permission boundaries
-Review and create the user
-Click on the user and press create access key on the right side of the summary box
-For Access key best practices & alternatives, select "Application running outside AWS"
-Add description tag (not required)
-The keys are now created, save them in a secure location, these will be used to log into the VPN program
-The secret key can not be seen again after exiting the tab
-Do not put the keys in a public spot or in code, as other people who have access to the key can use it to create servers, and can lead to excess charges on bank account
-The access key will be in the Access Token Box, while the Secret key will be used in the Secret Token box
+2. **Navigate to IAM (Identity and Access Management) Dashboard**:
+   - In the AWS Management Console, go to **IAM** (Identity and Access Management).
+   - Find **IAM** in the services menu or use the search bar.
+
+3. **Create a New User**:
+   - Go to the **Users** tab on the left side of the screen, between **User Groups** and **Roles** under **Access Management**.
+   - Click **Add user**.
+   - Choose a user name and allow access to the AWS Management Console (optional).
+   
+4. **Set Permissions**:
+   - Set the permissions as **Attach policies directly**.
+   - Select the **AmazonEC2FullAccess** policy to grant full EC2 access.
+   - Ignore permission boundaries for now.
+
+5. **Review and Create the User**:
+   - Review the information, and create the user.
+   - After creating the user, click on the user’s name to view the details.
+
+6. **Generate Access and Secret Keys**:
+   - On the user’s summary page, click **Create access key** on the right side.
+   - For best practices & alternatives, select **Application running outside AWS**.
+   - Optionally, add a description tag (not required).
+   - The **Access Key ID** and **Secret Access Key** will be generated.
+   - Save these keys in a secure location immediately as the secret key will not be shown again after closing the tab.
+
+7. **Important Security Notes**:
+   - Do **not** put your keys in a public spot or in your code. If someone else gains access to your keys, they could use them to create servers and cause excessive charges on your account.
+   - The **Access Key** will be used in the **Access Token** box, while the **Secret Key** will be entered in the **Secret Token** box within the VPN application.
+
