@@ -1,4 +1,4 @@
-# CIS 375 Group Project
+
 
 This application automatically deploys a VPN server on a cloud service provider (currently, only AWS is supported). The application manages the VPN connection, allows the user to filter DNS traffic, and provides statistics about their network usage.
 
